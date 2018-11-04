@@ -1,0 +1,18 @@
+{
+    "name": "Google Fit Spoofer",
+    "version": "1.0",
+    "description": "Add steps to g-fit",
+     "permissions": ["storage"], 
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+      "content_scripts": [
+    {
+      "matches": ["https://fit.google.com/u/0/"],
+      "run_at": "document_end",
+      "js": ["content.js"]
+    }
+  ], 
+  "manifest_version": 2
+}
